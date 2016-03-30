@@ -1,0 +1,440 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>MY Express</title>
+
+<!--
+<meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词。
+<meta> 标签位于文档的头部，不包含任何内容。<meta> 标签的属性定义了与文档相关联的名称/值对。
+ -->
+ 
+<meta name="author" content="Xiongwei Zhao">
+<meta name="revised" content="Xiongwei Zhao,2015-07-09 12:35:17">
+
+<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--> <!-- This fixes some bugs in older versions of Internet Explorer -->
+
+<!-- CSS STYLES -->
+<!--
+<link href="./editorder_files/main.css" rel="stylesheet" type="text/css" media="screen">
+
+<link href="./editorder_files/flexslider.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./editorder_files/less.css" rel="stylesheet" type="text/css" media="screen">
+<link href="./editorder_files/newsstyle.css" type="text/css" rel="stylesheet">
+
+<link rel="stylesheet" href="http://www.pedaexpress.com/_css/jquery.ui.autocomplete.css">
+<link rel="stylesheet" href="http://www.pedaexpress.com/_css/dataTable.css" media="screen">
+-->
+
+<link href="./css_file/mytablecloth.css" type="text/css" rel="stylesheet">
+<link href="./css_file/mystyle.css" type="text/css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+
+<!-- FONTS from GOOGLE FONTS -->
+<!-- <link href="./editorder_files/css" rel="stylesheet" type="text/css"> -->
+
+<!-- 在 HTML 页面中插入一段 JavaScript： -->
+<script type="text/javascript" src="./js_file/jquery.min.js"></script>
+<script type="text/javascript" src="./js_file/jquery.ui.core.js"></script>
+<script type="text/javascript" src="./js_file/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="./js_file/jquery.ui.position.js"></script>
+<script type="text/javascript" src="./js_file/jquery.ui.autocomplete.js"></script>
+<script type="text/javascript" src="./js_file/myorder.js"></script>
+<script type="text/javascript" src="./js_file/tablecloth.js"></script>
+
+
+        
+
+
+
+
+</head>
+
+
+
+<!-- body 元素定义文档的主体。-->
+<body lang="en">
+<!--
+<div> 可定义文档中的分区或节（division/section）。
+<div> 标签可以把文档分割为独立的、不同的部分。它可以用作严格的组织工具，并且不使用任何格式与其关联。
+如果用 id 或 class 来标记 <div>，那么该标签的作用会变得更加有效。
+-->
+<div class="wrapper1">
+<header>
+
+
+<div id="logo">
+<img src="./img_file/logo.png" width="100" height="100" alt="澳代艾美利"> <!-- alt 属性是一个必需的属性，它规定在图像无法显示时的替代文本 -->
+</div><!-- end logo -->
+<div class="contact-info"> <img src="./img_file/twitter.png" width="32" height="32" alt="twitter">    <img src="./img_file/facebook.png" width="32" height="32" alt="facebook">    <img src="./img_file/googleplus.png" width="32" height="32" alt="google+">    <img src="./img_file/linkedin.png" width="32" height="32" alt="linked in"><br>
+Phone:  04 1006 0819
+</div><!-- end contact-info -->
+
+<div class="clearfloat"></div>
+
+</header>
+
+
+
+</div><!-- end wrapper1 -->
+<!-- 
+<nav>
+<ul class="menu">
+<li><a href=" "><strong>主页</strong></a></li>
+<li><a href="" class="current"><strong>会员登入</strong></a></li>
+<li><a href=""><strong>注册会员</strong></a></li>
+<li><a href=""><strong>订单查询</strong></a></li>
+<li><a href=""><strong>寄件需知</strong></a></li>
+<li><a href=""><strong>收货地点</strong></a></li>
+<li><a href=""><strong>联系我们</strong></a></li>
+<div class="clearfloat"></div>
+</ul>
+</nav>
+ -->
+
+<div class="main">
+<div class="slider-holder"><!-- end flexslider -->
+</div><!-- end slider-holder -->
+
+<!-- 
+<h3 class="page-heading"><span><strong><a href="">会员资料</a> | <a href="">收件人管理</a> | <a href="">我的订单</a>  | <a href="" target="new">在线下单</a> | <a href="">退出系统</a></strong></span></h3>
+<p>&nbsp;</p>
+ -->
+
+ <div align="center">
+
+  
+﻿  
+
+	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<h1>我的第一张 PHP 页面</h1>
+
+<?php
+echo "Hello World!";
+?>
+
+<h1 class="page-heading"><span><strong> 收件人管理</strong></span></h1>
+
+		<table id="orders" width="100%" border="1" cellspacing="0" cellpadding="0" align="center" class="post"> 
+
+<!--onsubmit确定点击提交后执行的函数-->
+<!-- <form id="detail" action="./printa.html"  onsubmit="return chk_form()"> -->
+<!-- 2015-11-27 11:07:53 修改 -->
+<form name="myform1"id="detail" action=" "  onsubmit="chk_form()">	
+
+
+<!--action 属性规定当提交表单时，向何处发送表单数据。-->
+<tbody><tr height="25" class="postpt">
+	<th height="25"  class="postpt">姓名：</th>
+	<td><input type="text" class="input" name="rname" id="rname" style="width: 100px;" required></td> 
+	<th height="25"  class="postpt" align="right">省份：
+	</th><td><input type="text" class="input" name="province" id="province" style="width: 100px;" value=""></td>
+	<th height="25"  class="postpt" align="right">市：</th><td><input type="text" class="input" name="city" id="city" style="width: 100px;" value=""></td>
+	</tr><tr  class="postpt">
+	<th height="30"  class="postpt">区：</th><td><input type="text" class="input" name="district" id="district" style="width:100%;" value=""></td>
+	<th height="30"  class="postpt" align="right">街道：</th><td><input type="text" class="input" name="address" id="address" style="width:100%;" value=""></td>
+	<th height="30"  class="postpt" align="right">邮编：</th><td><input type="text" class="input" name="postcode" id="postcode" style="width: 100px;" value=""></td>
+	</tr><tr  class="postpt">
+	<th height="30"  class="postpt">Email：</th><td><input type="text" class="input" name="email" id="email" style="width: 150px;" value=""></td>            
+	<th height="30"  class="postpt" align="right">身份证号码：</th><td colspan="3"><input type="text" class="input" name="idno" id="idno" style="width: 50%;" value=""></td> 
+	</tr><tr  class="postpt">
+	<th height="30"  class="postpt">手机号码：</th><td><input type="text" class="input" name="phone" id="phone" style="width: 150px;" value="" required></td> <td colspan="2"><font color="red">（注意：号码错会增加费用！）</font> </td>
+	<td colspan="2"><input type="hidden" class="input" id="nameindex" style="width: 20px;height:20px" disabled> </td>
+	</tr>
+</tbody></table>
+			
+		<!-- <h2>Table with side headings</h2> -->
+			
+				<td><input class="button blue" type="button" value="保存收件人" id="btnSaveReceiver"/></td>
+				<td><input class="button green" type="button" value="展示所有联系人" onclick="showAllTheData();"/></td>
+				<td><input class="button green" type="button" value="清除显示" onclick="clearScreen();"/></td>
+				<td><input class="button green" type="button" value="修改当前记录" onclick="modiItem();" disabled/></td>
+				<td><input class="button green" type="button" value="清空数据库" onclick="clearDatebase();"/></td>
+				<td><input class="button green" type="button" value="清空表格" onclick="clearOrderForm();"></td>
+			
+			  
+			
+			
+      <table id="tblData">
+      </table>
+        
+
+
+<h1 class="page-heading"><span><strong> 物品数据库管理</strong></span></h1>
+		
+		<table  border="1" cellspacing="0" cellpadding="0" align="center" class="post">
+		<tbody><tr style="background-image:url(img_file/tableback.png)" class="postpt">
+			<th height="30" align="center">物品全称</th> 
+			<th height="30" align="center">品牌</th>
+			<th align="center">物品名称</th>
+			<th height="30" align="center">价格</th>
+			<th height="30" align="center">重量</th>
+		</tr>
+		<tr style="background-image:url(img_file/tableback.png)" class="postpt">
+			<td><input class="input" type="text" name="mname" id="mname" style="width: 500px;" value="" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input class="input" type="text" name="mbrand" id="mbrand" style="width: 100px;" value=" "></td>
+			<td><input class="input" type="text" name="mcnname" id="mcnname" style="width: 150px;" value=""></td>
+			<td><input class="input" type="text"  name="mprice" id="mprice" style="width: 100px;" value=""></td>
+			<td><input class="input" type="text"  name="mweight" id="mweight" style="width: 50px;" value=""></td>		
+		</tr>
+		</tbody></table>
+		
+		
+
+			
+		<input class="button blue" type="button" value="保存新货物" id="btnSaveNewgoods">
+		<input class="button green" type="button " value="展示所有货物" onclick="showAllTheMedicinData();" >
+		<input class="button green" type="button" value="清除货物显示" onclick="clearMedScreen();"/>
+		<input class="button green" type="button" value="修改当前物品" onclick="modiMedItem();"/>
+		<input class="button green" type="button" value="删除当前物品" onclick="deleteMedItem();"/>
+		<input class="button green" type="button" value="清空物品数据库" onclick="clearMedDatebase();"/>
+		<input class="button green" type="button" value="清空表格" onclick="clearOrderForm();">
+		
+		<table id="tblMedData">
+    </table>
+    
+<p>&nbsp;</p>
+
+	<h1 class="page-heading"><span><strong> 订单数据库管理</strong></span></h1>
+ 
+<!-- 
+		<table>
+			<tr>
+		  <th >订单号：</th>
+		  <td > <input class="input" type="text" id="thisorder" style="border:0px;width:108px;height:30px" disabled > </td>
+		  </tr>
+		  <th >查询订单：</th>
+		  <td > <input class="input" type="text" id="findorder" style="border:1;width:108px;height:30px"  > </td>
+		  <tr>
+		  	
+		  </tr>
+		</table>
+ -->
+  
+  <table cellspacing="0" cellpadding="0">
+      <tr>
+        <th>订单号：</th>
+        <td> <input class="input" type="text" id="thisorder" style="border:0px;width:108px;height:30px" disabled ></td>    
+      </tr>
+      <tr>
+        <th>查询订单：</th>
+        <td><input class="input" type="text" id="findorder" style="border:1;width:108px;height:30px"  > </td>     
+      </tr>      
+    </table>
+    
+    
+			<table border="1" cellspacing="0" cellpadding="0" align="center" class="post1" id="myorderform">
+<!-- 				<tbody> -->
+		<tr class="postpt">
+			 
+	<!-- 
+		<td class="empty">haha</td> 
+			<th colspan="4" height="30" align="center">物品搜索</th> 
+			<th height="30" align="center">品牌</th>
+			<th  colspan="2" align="center" class="textth">物品名称</th>
+			<th height="30" align="center" class="textth">数量</th>
+			<th height="30" align="center" class="textth">单价($)</th>
+ -->
+ 			<td></td> 
+			<th colspan="4">物品搜索</th> 
+			<th>品牌</th>
+			<th  colspan="2">物品名称</th>
+			<th>数量</th>
+			<th>单价($)</th>
+		</tr>
+		<tr class="postpt">
+			 <td align="center" scope="row">1</td>
+			<td colspan="4"><input  class="input" style="width: 500px;" type="text" name="itemdesc_1" id="itemdesc_1"  value="" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input class="input"  style="width: 100px;" type="text" name="itembrand_1" id="itembrand_1"  value=" "></td>
+			<td colspan="2"><input class="input" style="width: 150px;" type="text" name="itemname_1" id="itemname_1"  value=""></td>
+			<td><input style="width: 50px;" class="input" type="text" name="itemqty1" id="itemqty1"  value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue1" id="itemvalue1"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value + povalue.value*1"></td>
+		</tr>
+				
+			
+		<tr>
+			<td align="center" scope="row">2</td>
+			<td colspan="4"><input class="input" style="width: 500px;" type="text"        name="itemdesc_2"    id="itemdesc_2"     value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text" class="input" name="itembrand_2"   id="itembrand_2"    value=""></td>
+			<td colspan="2"><input style="width: 150px;"type="text" class="input" name="itemname_2"    id="itemname_2"     value=""></td>	  
+			<td><input style="width: 50px;" type="text" class="input" name="itemqty2"      id="itemqty2"       value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue2" id="itemvalue2"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value + povalue.value*1"></td>
+		</tr>
+		
+				
+		<tr style="background-image:url(img_file/tableback.png)">
+			<td align="center" scope="row">3</td>
+			<td colspan="4"><input style="width: 500px;" type="text" name=   "itemdesc_3" id=   "itemdesc_3"  value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text" class="input"name=  "itembrand_3" id=  "itembrand_3"  value=""></td>
+			<td colspan="2"><input style="width: 150px;" type="text" class="input"name=   "itemname_3" id=   "itemname_3"  value=""></td>		 
+			<td><input style="width: 50px;"  type="text" class="input"name=     "itemqty3" id=     "itemqty3" value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue3" id="itemvalue3"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+
+				
+		<tr style="background-image:url(img_file/tableback.png)">
+			<td align="center" scope="row">4</td>
+			<td colspan="4"><input style="width: 500px;" type="text" name=   "itemdesc_4"id="itemdesc_4"  value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text" class="input" name=  "itembrand_4" id="itembrand_4"  value=""></td>
+			<td colspan="2"><input style="width: 150px;" type="text" class="input" name=   "itemname_4"id="itemname_4"  value=""></td>
+			<td><input style="width: 50px;"  type="text" class="input" name=     "itemqty4"id="itemqty4"  value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue4" id="itemvalue4"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+
+				
+		<tr style="background-image:url(img_file/tableback.png)">
+			<td align="center" scope="row">5</td>
+			<td colspan="4"><input style="width: 500px;" type="text"  name=  "itemdesc_5" id="itemdesc_5"  value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input  style="width: 100px;" type="text"  class="input" name= "itembrand_5"  id="itembrand_5"  value=""></td>
+			<td colspan="2"><input  style="width: 150px;" type="text"  class="input" name=  "itemname_5" id="itemname_5"  value=""></td>	
+			<td><input  style="width: 50px;"  type="text"  class="input" name=    "itemqty5"id="itemqty5"  value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue5" id="itemvalue5"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+		<tr style="background-image:url(img_file/tableback.png)">
+			<td align="center" scope="row">6</td>
+			<td colspan="4"><input style="width: 500px;" type="text" name=  "itemdesc_6"id="itemdesc_6"  value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text" class="input"name= "itembrand_6" id="itembrand_6"  value=""></td>
+			<td colspan="2"><input style="width: 150px;" type="text" class="input"name=  "itemname_6"id="itemname_6"  value=""></td>
+			<td><input style="width: 50px;"  type="text" class="input"name=    "itemqty6" id="itemqty6"  value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue6" id="itemvalue6"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+		<tr style="background-image:url(img_file/tableback.png)">
+			<td align="center" scope="row">7</td>
+			<td colspan="4"><input style="width: 500px;" type="text" name=  "itemdesc_7" id="itemdesc_7" value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text"class="input" name= "itembrand_7"  id="itembrand_7"  value=""></td>
+			<td colspan="2"><input style="width: 150px;" type="text"class="input" name=  "itemname_7" id="itemname_7"  value=""></td>
+			<td><input style="width: 50px;"  type="text"class="input" name=    "itemqty7"id="itemqty7"  value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue7" id="itemvalue7"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+		<tr style="background-image:url(img_file/tableback.png)" >
+			<td align="center" scope="row">8</td>
+			<td colspan="4"><input style="width: 500px;" type="text" name=  "itemdesc_8" id="itemdesc_8"  value="" class="input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"></td>
+			<td><input style="width: 100px;" type="text"class="input" name= "itembrand_8" id="itembrand_8"  value=""></td>
+			<td colspan="2"><input style="width: 150px;" type="text"class="input" name=  "itemname_8"  id="itemname_8"  value=""></td>
+			<td><input style="width: 50px;"  type="text"class="input" name=    "itemqty8"id="itemqty8" value=""></td>
+			<td><input style="width: 70px;" class="input" type="text" name="itemvalue8" id="itemvalue8"  value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+		</tr>
+		
+	
+		<tr style="background-image:url(img_file/tableback.png)" >	
+			<!-- <td><nobr>快递公司</nobr></td><td> -->
+			<td align="center" scope="row"></td>
+			<th  align="center"><nobr>快递公司</nobr></th>
+			<td><select class="button black" id="selectedCompany" style="width:80px;height:40px">		
+						<option value="fang" selected="selected">方舟</option>
+						<option value="huo">货运皇</option>
+						<option value="168">168</option>
+				</select></td>
+				<th><nobr>快递单号</nobr></th>
+				<td><input type="text" class="input" name="orderID" id="orderID"  value=""></td>
+				<td><input class="button black" type="button"  style="margin-left:0;margin-right:0;width:100px" value="单号回填" id="wirtebackOderID"></td>
+				
+			<th colspan="1" height="43"  align="left" style="width: 70px;"><nobr>邮费($)</nobr></th><td> <input type="text" class="input" name="povalue" id="povalue" style="width: 80px;" value="" onBlur="allvalue.value=itemvalue1.value*itemqty1.value+itemvalue2.value*itemqty2.value+itemvalue3.value*itemqty3.value+itemvalue4.value*itemqty4.value+itemvalue5.value*itemqty5.value+itemvalue6.value*itemqty6.value+itemvalue7.value*itemqty7.value+itemvalue8.value*itemqty8.value+povalue.value*1"></td>
+			<th colspan="1" height="43"  align="left"><nobr>总价($)</nobr></th><td> <input type="text" class="input" name="allvalue" id="allvalue" style="width: 70px;" value="" disabled></td>
+		</tr>
+	  
+	<tr style="background-image:url(img_file/tableback.png)" class="postpt">	  
+		<td colspan="10">
+		<!-- <input type="hidden" name="orderid" value="00003908B"> !>
+		<!-- <input type="submit" style="margin-right: 1em; border: 1px solid; border-color: #FFFDEE #FDB939 #FDB939 #FFFDEE; background: #FFF8C5; color: #090; padding: 3px 4px;" id="submit1" value="确认订单"></td> -->
+
+		<input type="hidden" id="action" name="action" style="height:0px;" ></td>     <!-- 这个语句控制着写入 -->
+		</tr>
+
+   
+		<tr style="background-image:url(img_file/tableback.png)">	
+<!-- 			<td scope="row"></td> -->
+		<td colspan="6" rowspan="4" style="text-align:center;" >
+		<input class="button black" type="button" style="height:80px;width:70%" id="submit1" value="确认订单"></td>
+	  <td colspan="4" style="text-align:center;" > <input class="button black" style="width:80%" type="submit"  id="submit2"  onclick="document.getElementById('action').value=1 " value="打印订单（货运皇）"> 
+  	</td>
+  	 
+	  </tr>
+	  
+	  <tr style="background-image:url(img_file/tableback.png)" class="postpt">
+<!-- 	  	<td scope="row"></td> -->
+	 <td colspan="4" style="text-align:center;" >
+     <input type="submit"  class="button black" style="width:80%" id="submit4"  onclick="document.getElementById('action').value=2 " value="打印订单（货运皇6种以上）"> 
+		 </td> </tr>
+		 <tr style="background-image:url(img_file/tableback.png)" class="postpt">
+<!-- 		 	<td scope="row"></td> -->
+     <td colspan="4" style="text-align:center;" >
+		 <input type="submit"  class="button black" style="width:80%" id="submit3" onclick="document.getElementById('action').value=3" value="打印订单（方舟）"> 
+		 </td></tr>
+		 <tr style="background-image:url(img_file/tableback.png)" class="postpt">
+<!-- 		 	<td scope="row"></td> -->
+		 <td colspan="4" style="text-align:center;" >
+		 <input type="submit"  class="button black" style="width:80%" id="submit5" onclick="document.getElementById('action').value=4" value="打印订单（168）">  </td>
+
+		</tr>
+		
+	
+
+			<!-- <tr id="line"><td colspan="3"><a href="javascript:return false;" onclick="addrows()">[ 增加物品 ]</a></td></tr> -->
+<!-- 		</tbody> -->
+		</table>
+		
+		<input class="button blue" type="button" value="展示保存订单" onclick="showAllTheOrderData();">
+		<input class="button green" type="button" value="清除订单显示" onclick="clearOrderScreen();">
+		<input class="button green" type="button" value="修改当前订单" onclick="modiOrderItem();">
+		<input class="button green" type="button" value="清空订单数据库" onclick="clearOrderDatebase();">
+		<input class="button green" type="button" value="清空表格" onclick="clearOrderForm();">
+		<input class="button green" type="button" value="删除最后一条" onclick="deleteTheLastData();">
+		
+		<table id="tblOrderData">
+		</table>
+		
+
+	</div>		
+	
+</form> 
+
+ 
+	
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- end column-small --><!-- end column-small --><!-- end column-small last -->
+
+<div class="clearfloat"></div><!-- end next -->
+<div class="clearfloat"></div>
+
+</div><!-- end main -->
+
+<div class="wrapper2">
+
+<footer><!-- end footer-column1 --><!-- end footer-column2 --><!-- end footer-column3 -->
+
+<div class="clearfloat"></div>
+
+<div class="left">
+  <strong>Copyrights © MY  Express Australia 2015</strong></div><!-- end left -->
+
+<div class="right">
+  <strong>Designed by Shawn </strong></div><!-- end right -->
+  
+<div class="clearfloat"></div>
+
+</footer>
+</div><!-- end wrapper2 -->
+
+
+<!-- SCRIPTS -->
+
+
+
+
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul></body></html>
